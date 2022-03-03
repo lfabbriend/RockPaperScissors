@@ -58,7 +58,7 @@ return result;
 /*
 function play (userOpt){
     let computerOpt = computerSelection();
-    let userOpt = userOpt;                      //como no estoy segura del comentario seiguiente,
+    let userOpt = userOpt;                      //como no estoy segura del comentario siguiente,
                                                 //asigno userOpt a otra variable userOpt
     if (userOpt == computerOpt) {
         result = "Tie";
@@ -72,7 +72,7 @@ function play (userOpt){
 */
 function play (userOpt){
     let computerOpt = computerSelection();                     
-
+    let result;
     if (userOpt == computerOpt) {
         result = "Tie";
     }
@@ -102,7 +102,9 @@ function play (userOpt){
             }  
 
     }
+    
     alert(userOpt);
     alert(computerOpt);
     alert(result);
+
 }
