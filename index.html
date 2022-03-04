@@ -9,18 +9,16 @@
   </head>
   <body>
     <h1>Rock Scisors Paper</h1>
-    <div class="container">
-      <div id="btnGroup">
-        <button id="btnRock" type="button">
-          <img src="images/therock.jfif" />
-        </button>
-        <button id="btnScissors" type="button">
-          <img src="images/scissorshand.jfif" />
-        </button>
-        <button id="btnPaper" type="button">
-          <img src="images/paper.png" />
-        </button>
-      </div>
+    <div class="container" id="btnGroup">
+      <button id="btnRock" type="button" data-value="rock">
+        <img class="btnImagen" src="images/therock.jfif" />
+      </button>
+      <button id="btnScissors" type="button" data-value="scissors">
+        <img class="btnImagen" src="images/scissorshand.jfif" />
+      </button>
+      <button id="btnPaper" type="button" data-value="paper">
+        <img class="btnImagen" src="images/paper.png" />
+      </button>
     </div>
 
     <script src="app.js"></script>

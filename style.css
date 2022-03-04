@@ -1,11 +1,31 @@
 .container {
-  display: grid;
-  grid-template-columns: 100px 100px;
-  grid-template-rows: 100vh;
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-.container .button {
-  padding: 100px 100px;
-  display: inline-block;
+h1 {
+  font-size: clamp(32px, 10vw, 75px);
+  font-family: "Franklin Gothic Medium";
+  text-align: center;
+}
+
+.btnImagen {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .btnImagen {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .btnImagen {
+    width: 100px;
+    height: 100px;
+  }
 }

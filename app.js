@@ -1,22 +1,30 @@
 const btnRock = document.getElementById("btnRock");
 const btnScissors = document.getElementById("btnScissors");
 const btnPaper = document.getElementById("btnPaper");
+const btnGroup = document.querySelector("#btnGroup")
+const options = btnGroup.querySelectorAll("button");
+options.forEach((option)=>{
+    option.addEventListener("click", (event)=>{
+        play(event.currentTarget.dataset.value);
+    });
+
+})
 
 
-btnRock.addEventListener("click", ()=>{
-    let userOpt = "rock";
-    play(userOpt);
-});
+// btnRock.addEventListener("click", ()=>{
+//     let userOpt = "rock";
+//     play(userOpt);
+// });
 
-btnScissors.addEventListener("click", ()=>{
-    let userOpt = "scissors";
-    play(userOpt);
-});
+// btnScissors.addEventListener("click", ()=>{
+//     let userOpt = "scissors";
+//     play(userOpt);
+// });
 
-btnPaper.addEventListener("click", ()=>{
-    let userOpt = "paper";
-    play(userOpt);
-});
+// btnPaper.addEventListener("click", ()=>{
+//     let userOpt = "paper";
+//     play(userOpt);
+// });
 
 function computerSelection(){
     const options = ["rock", "scissors", "paper"]; 
@@ -25,7 +33,7 @@ function computerSelection(){
     return computerOpt;
 }
 
-/*
+
 function notTie(userOpt,computerOpt) {
 let result;
     switch(userOpt){
@@ -53,23 +61,24 @@ let result;
         }
 return result;
 }
-*/
 
-/*
+
+
 function play (userOpt){
     let computerOpt = computerSelection();
-    let userOpt = userOpt;                      //como no estoy segura del comentario siguiente,
+                                                //como no estoy segura del comentario siguiente,
                                                 //asigno userOpt a otra variable userOpt
-    if (userOpt == computerOpt) {
-        result = "Tie";
-    }
-    else{
-        result = notTie(userOpt, computerOpt);  //no estoy segura de que userOpt se puede pasar de 
+
+    result = userOpt === computerOpt ? "Tie" : notTie(userOpt, computerOpt);                             
+                                                //no estoy segura de que userOpt se puede pasar de 
                                                 //funcion a funcion cuando estan anidadas
-    }
+    alert(userOpt);
+    alert(computerOpt);                         //custom alert
     alert(result);
 }
-*/
+
+
+/*
 function play (userOpt){
     let computerOpt = computerSelection();                     
     let result;
@@ -82,7 +91,7 @@ function play (userOpt){
                 if (computerOpt == "rock"){             //como los comentarios previos
                 result = "user wins";
                 }
-                else if (computerOpt== "scissors"){
+                else if (computerOpt== "scissors"){     //intentar con un doble ternario
                 result = "computer wins";}
                 break;
             case "rock":
@@ -102,9 +111,10 @@ function play (userOpt){
             }  
 
     }
-    
+
     alert(userOpt);
     alert(computerOpt);
     alert(result);
-
 }
+
+*/
